@@ -3,7 +3,7 @@
  * Plugin Name: SEO SIMPLE PACK
  * Plugin URI: https://wemo.tech/1670
  * Description: A very simple SEO plugin. You can easily set and customize meta tags and OGP tags for each page.
- * Version: 3.6.1
+ * Version: 3.6.2
  * Author: LOOS,Inc.
  * Author URI: https://loos-web-studio.com/
  * License: GPL2 or later
@@ -66,11 +66,13 @@ class SEO_SIMPLE_PACK {
 
 			// Dataセット
 			SSP_Data::init();
+			SSP_Menu::init();
+			SSP_MetaBox::init();
 		}, 0 );
 
+		SSP_Menu::create();
+		SSP_MetaBox::create();
 		SSP_Hooks::init();
-		SSP_Menu::init();
-		SSP_MetaBox::init();
 		SSP_Output::init();
 	}
 }
